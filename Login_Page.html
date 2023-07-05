@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login_Page</title>
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link href="Stylesheet.css" rel="stylesheet" /> 
+    </head>
+    
+    <body>
+        <nav class="navbar" >
+            <div class="container" style="justify-content: unset; background-color: #fff;">
+                <img src="LOGO.png" alt="Logo" class="d-inline-block align-text-top">
+                <h1>FASHION STAR</h1>
+              
+            </div>
+        </nav>
+        
+        <div class="container" >
+            
+            <div class="container-fluid" class="row align-items-start" 
+            style="text-decoration: none;text-align: center;margin-left: 0px;margin-right: 0px; ">
+                <div class="row">
+                    <div class="col-12  col-md-3"> 
+                        <a href="#" class="btn btn-light" role="button" data-bs-toggle="button" style="width:100%;border-radius: 0% ;">Home</a>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <a href="Login_Page.html" class="btn btn-light" role="button" data-bs-toggle="button" aria-pressed="true" class="active" style="width:100%;border-radius: 0%;">Login</a>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <a href="#" class="btn btn-light" role="button" data-bs-toggle="button" class="active" style="width:100%;border-radius: 0%;">About US</a>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <a href="#" class="btn btn-light" role="button" data-bs-toggle="button" style="width:100%;border-radius: 0%;">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="container" >
+            <div class="body-image" >
+                <img src="Bodyimage.jpg" class="img-fluid" alt="body Image">
+            </div> 
+            
+            <div class="container" >
+                <form class="form "onsubmit="validate(event)"  >
+                        <h2>WELCOME</h2>
+                        <label for="exampleFormControlInput1" class="form-label">Username :</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Username">
+    
+                        <label for="inputPassword5" class="form-label">Password :</label>
+                        <input type="password" id="inputPassword5" class="form-control" aria-labelledby="passwordHelpBlock" placeholder="Password">
+                         <br>
+                         <div class="alert alert-danger" id="validation-error" d-none >
+
+                         </div>
+                         <div class="alert alert-success" id="validation-success" d-none >
+                 
+                         </div>
+                        <!-- button type should be submit -->
+                         <button type="submit" class="btn btn-light" role="button"  style="width:25%;border-radius: 12px;">LOGIN</button>
+                         
+                         
+                </form>    
+            </div>
+        </div>
+
+        
+
+       
+          
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
+        crossorigin="anonymous"></script>
+        
+    <script>
+//--------------------------------------------------------------------------------------------
+        // another way using d-none
+
+        // document.getElementById('validation-error').classList.add('d-none');
+        // document.getElementById('validation-success').classList.add('d-none');
+//-------------------------------------------------------------------------------------------        
+        document.getElementById('validation-error').style.display="none";
+        document.getElementById('validation-success').style.display="none";
+
+        function validate(event){
+
+
+            event.preventDefault(); //preventing form submission before validation.
+
+             let Username= document.getElementById('exampleFormControlInput1').value;
+             let password= document.getElementById('inputPassword5').value;
+//----------------------------------------------------------------------------------------------------
+            //another way using d-none
+
+            // const validationError = document.getElementById('validation-error');
+            // const validationSuccess = document.getElementById('validation-success');
+
+            // if (Username !== "" && password !== "") {
+            // validationSuccess.innerHTML = "The form is valid.";
+            // validationSuccess.classList.remove('d-none');
+            // validationError.classList.add('d-none');
+            // } else {
+            // validationError.innerHTML = "Username and password cannot be blank";
+            // validationError.classList.remove('d-none');
+            // validationSuccess.classList.add('d-none');
+            // }
+//--------------------------------------------------------------------------------------------------------
+            if(Username != "" && password != ""){
+                document.getElementById('validation-success').innerHTML="The form is valid.";
+                document.getElementById('validation-error').style.display="none";
+                document.getElementById('validation-success').style.display="block";
+            }else{
+                document.getElementById('validation-error').innerHTML="username and password cannot be blank";
+                document.getElementById('validation-error').style.display="block";
+                document.getElementById('validation-success').style.display="none";
+            }
+
+            console.log(Username);
+        }
+
+    </script>
+    
+    </body>
+</html>
