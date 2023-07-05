@@ -7,6 +7,7 @@ I have also used an external CSS file  and added media queries.
 Implementation Details
 
 1. Bootstrap's d-none class vs. JavaScript style.display="none":
+   
 The main difference between d-none and style.display="none" lies in how they achieve hiding elements.
 
 d-none is a class provided by Bootstrap that sets the display property of an element to none. 
