@@ -19,6 +19,7 @@ This method is not tied to any specific framework, providing more control over w
 It can be used for custom JavaScript code or projects that do not utilize Bootstrap.
 
 2. Form Validations:
+   
 i. Blank Username and Password Validation:
 When the user clicks the login button without providing a username and password, the form validation JavaScript code triggers.
  It checks if the input fields for the username and password are empty.
