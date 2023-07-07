@@ -1,5 +1,6 @@
 # Login_Page-JavaScript-Bootstarp-
-Description
+Description :
+
 This repository contains a login page built using Bootstrap CDN for the front-end design and JavaScript for implementing two types of form validations. 
 The main goal of this project is to demonstrate how to use Bootstrap classes and custom JavaScript code to create a simple login form with client-side validation.
 I have also used an external CSS file  and added media queries.
